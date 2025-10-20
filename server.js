@@ -8,7 +8,14 @@ const cors = require('cors');
 dotenv.config(); // Load .env file
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: "https://frontend-bookstore-psi.vercel.app/", // <-- your exact Vercel domain
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // optional (only if you use cookies or auth)
+  })
+);
 
 app.use("/uploads", express.static("uploads"));
 
