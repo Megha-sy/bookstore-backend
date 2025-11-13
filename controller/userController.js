@@ -2,7 +2,6 @@ const { Book, Cart }  = require('../models/Book');
 const fs = require("fs");
 const path = require("path");
 
-// ----------------- BOOK CONTROLLERS -----------------
 
 const postbook = async (req, res) => {
   try {
@@ -163,3 +162,85 @@ module.exports = {
   addToCart,
   removeFromCart
 };
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+ 

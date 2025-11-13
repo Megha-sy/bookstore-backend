@@ -11,8 +11,11 @@ const app = express();
 // app.use(cors());
 app.use(
   cors({
-    origin: "https://frontend-bookstore-psi.vercel.app", // <-- your exact Vercel domain
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: [
+      "https://frontend-bookstore-psi.vercel.app",  // Production frontend
+      "http://localhost:5173",                      // Vite default
+      "http://localhost:5174"                       // Your local port
+    ],    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // optional (only if you use cookies or auth)
   })
 );

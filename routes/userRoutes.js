@@ -9,7 +9,7 @@ const { addToWishlist, getWishlist, removeFromWishlist } = require("../controlle
 
 // -------------- MULTER SETUP HERE --------------
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, "uploads/"), // make sure 'uploads' folder exists
+  destination: (req, file, cb) => cb(null, "uploads/"), // make sure 'uploads' folder exists   cb= callback function
   filename: (req, file, cb) => cb(null, Date.now() + "-" + file.originalname),
 });
 const upload = multer({ storage });
@@ -21,8 +21,8 @@ router.post('/add', upload.single("image"), postbook);
 router.put('/put/:id', upload.single("image"), updatebook);
 router.delete('/delete/:id', deleteBook);
 
-router.get('/cart', getCartItems);                // Get all cart items
-router.post('/cart', addToCart);                 // Add book to cart
+router.get('/cart', getCartItems);                
+router.post('/cart', addToCart);                 
 router.delete('/cart/:id', removeFromCart); 
 
 router.post("/wishlist", addToWishlist);
